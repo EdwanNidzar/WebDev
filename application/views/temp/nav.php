@@ -16,7 +16,7 @@
                     <a class="nav-link" href="<?= base_url('kursus') ?>">Kursus</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Materi</a>
+                    <a class="nav-link" href="<?= base_url('material') ?>">Materi</a>
                 </li>
             </ul>
         </div>
