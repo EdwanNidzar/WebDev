@@ -56,4 +56,15 @@ class Kursus extends CI_Controller
             redirect('kursus');
         }
     }
+
+    public function liat($id)
+    {
+        $data['title'] = "Kursus | WEBDEV DIGITALIZ BATCH #5";
+        $data['material'] = $this->M_Kursus->get_courses_byid($id);
+        $data['material'] = $this->M_Kursus->get_courses_byname($id);
+        $this->load->view('temp/head', $data);
+        $this->load->view('temp/nav');
+        $this->load->view('material/material_read', $data);
+        $this->load->view('temp/foot');
+    }
 }
